@@ -545,6 +545,23 @@ header
       width: 230px
       img
         width: 100%
+      svg
+        width: 100%
+        .logo-1
+          fill: white
+        .logo-2
+          fill: white
+        .logo-3
+          fill: white
+        .logo-4
+          fill: white
+        .logo-5
+        .logo-6
+          animation: dash 10s linear
+          stroke: $azul
+          stroke-dasharray: 1000
+        .logo-circle
+          fill: $verde
     .logo-fixed
       display: none
       width: 230px
@@ -572,9 +589,26 @@ header
     height: 80px
     padding: 10px 0
     .logo
-      display: none
+      //display: none
+      display: inline-block;
+      .logo-1
+        fill: $azul
+      .logo-2
+        fill: #626b73
+      .logo-3
+        fill: #35414a
+      .logo-4
+        fill: #43a72d
+      .logo-5
+      .logo-6
+        animation: dash 10s linear
+        stroke: white
+        stroke-dasharray: 1000
+      .logo-circle
+        fill: $verde
     .logo-fixed
-      display: inline-block
+      display: none
+      //display: inline-block
     nav
       a
         color: #666
@@ -584,7 +618,7 @@ header
   left: 0
   position: relative
   right: 0
-  transition: .35s
+  transition: .75s
   white-space: nowrap
   *
     white-space: normal
@@ -666,8 +700,8 @@ header
 .table
   text-align: center
   th
-    color: #8B8B8B
-    font-size: 16px
+    color: #4E5D6A
+    font-size: 13px
     font-weight: 700
     padding: 16px !important
     text-align: center
@@ -780,3 +814,12 @@ header
 @media (max-width: 800px)
   .slider
     width: 100%
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
