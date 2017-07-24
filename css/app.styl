@@ -526,6 +526,7 @@ header
     position: absolute
     right: 0
     top: 40px
+    transition: .25s
     z-index: 1
     nav
       float: right
@@ -820,9 +821,9 @@ header
 
 @keyframes dash {
   from {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 0;
   }
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
   }
 }
