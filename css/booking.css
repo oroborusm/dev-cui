@@ -1,0 +1,409 @@
+.wrap {
+  width: 100%;
+}
+.wrap.member-selected .member:not(.selected) {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: perspective(100px) translatez(-50px);
+          transform: perspective(100px) translatez(-50px);
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.wrap.member-selected.date-selected .deselect-date {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrap.member-selected.date-selected .calendar .date {
+  -webkit-transform: scale(0.5) translateY(-5px) translateX(0px);
+          transform: scale(0.5) translateY(-5px) translateX(0px);
+  opacity: 1;
+}
+.wrap.member-selected.date-selected .calendar .month {
+  -webkit-transform: scale(0.5) translateY(-5px) translateX(100px);
+          transform: scale(0.5) translateY(-5px) translateX(100px);
+}
+.wrap.member-selected.date-selected .calendar .year {
+  -webkit-transform: scale(0.5) translateY(-5px) translateX(150px);
+          transform: scale(0.5) translateY(-5px) translateX(150px);
+}
+.wrap.member-selected.date-selected .calendar table {
+  pointer-events: none;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  border-top: 1px solid rgba(221, 221, 221, 0.8);
+}
+.wrap.member-selected.date-selected .calendar td:not(.selected), .wrap.member-selected.date-selected .calendar th:not(.selected) {
+  opacity: 0;
+  -webkit-transform: perspective(100px) translatez(-50px);
+          transform: perspective(100px) translatez(-50px);
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wrap.member-selected.date-selected .slots {
+  opacity: 1;
+  -webkit-transform: translatey(0%);
+          transform: translatey(0%);
+  pointer-events: auto;
+}
+.wrap.member-selected.date-selected .slots li {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+  opacity: 1;
+  color: #312eff;
+}
+.wrap.member-selected.date-selected .slots li:nth-child(1) {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0);
+          transform: translateY(0px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(2) {
+  -webkit-transition-delay: 83.33333ms;
+          transition-delay: 83.33333ms;
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(0);
+          transform: translateY(50px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(3) {
+  -webkit-transition-delay: 166.66667ms;
+          transition-delay: 166.66667ms;
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(0);
+          transform: translateY(100px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(0);
+          transform: translateY(150px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(5) {
+  -webkit-transition-delay: 333.33333ms;
+          transition-delay: 333.33333ms;
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(0);
+          transform: translateY(200px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(6) {
+  -webkit-transition-delay: 416.66667ms;
+          transition-delay: 416.66667ms;
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(0);
+          transform: translateY(250px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected .slots li:nth-child(7) {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(0);
+          transform: translateY(300px) perspective(100px) translateZ(0);
+}
+.wrap.member-selected.date-selected.slot-selected .form {
+  opacity: 1;
+  -webkit-transform: translatey(0%);
+          transform: translatey(0%);
+  pointer-events: auto;
+  -webkit-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wrap.member-selected.date-selected.slot-selected .form * {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(1) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(2) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(3) {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(4) {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(5) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+.wrap.member-selected.date-selected.slot-selected .form *:nth-child(6) {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+.wrap.member-selected.date-selected.slot-selected .deselect-slot {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrap.member-selected.date-selected.slot-selected .slots {
+  pointer-events: none;
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected) {
+  opacity: 0;
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(1) {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(-50px);
+          transform: translateY(0px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(2) {
+  -webkit-transition-delay: 83.33333ms;
+          transition-delay: 83.33333ms;
+  -webkit-transform: translateY(50px) perspective(100px) translateZ(-50px);
+          transform: translateY(50px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(3) {
+  -webkit-transition-delay: 166.66667ms;
+          transition-delay: 166.66667ms;
+  -webkit-transform: translateY(100px) perspective(100px) translateZ(-50px);
+          transform: translateY(100px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+  -webkit-transform: translateY(150px) perspective(100px) translateZ(-50px);
+          transform: translateY(150px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(5) {
+  -webkit-transition-delay: 333.33333ms;
+          transition-delay: 333.33333ms;
+  -webkit-transform: translateY(200px) perspective(100px) translateZ(-50px);
+          transform: translateY(200px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(6) {
+  -webkit-transition-delay: 416.66667ms;
+          transition-delay: 416.66667ms;
+  -webkit-transform: translateY(250px) perspective(100px) translateZ(-50px);
+          transform: translateY(250px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li:not(.selected):nth-child(7) {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+  -webkit-transform: translateY(300px) perspective(100px) translateZ(-50px);
+          transform: translateY(300px) perspective(100px) translateZ(-50px);
+}
+.wrap.member-selected.date-selected.slot-selected .slots li.selected {
+  -webkit-transform: translateY(0px) perspective(100px) translateZ(0px);
+          transform: translateY(0px) perspective(100px) translateZ(0px);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.8);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .deselect-member, .wrap.member-selected.date-selected.slot-selected.booking-complete .deselect-date, .wrap.member-selected.date-selected.slot-selected.booking-complete .deselect-slot {
+  opacity: 0;
+  pointer: none;
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form {
+  -webkit-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form:before, .wrap.member-selected.date-selected.slot-selected.booking-complete .form:after {
+  -webkit-transform: scalex(0);
+          transform: scalex(0);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form label {
+  opacity: 0;
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form input {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.8);
+  pointer-events: none;
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form input[name="name"] {
+  padding: 10px 70px;
+  -webkit-transform: translatey(-33px);
+          transform: translatey(-33px);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form input[name="email"] {
+  padding: 10px 70px;
+  -webkit-transform: translatey(-60px);
+          transform: translatey(-60px);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .form input[type="submit"] {
+  -webkit-transform: translatey(-60px);
+          transform: translatey(-60px);
+  opacity: 0;
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wrap.member-selected.date-selected.slot-selected.booking-complete .confirm-message {
+  opacity: 1;
+  -webkit-transform: translatey(0%);
+          transform: translatey(0%);
+  pointer-events: auto;
+}
+
+.deselect-member, .deselect-date, .deselect-slot {
+  position: absolute;
+  color: #ddd;
+  top: 35px;
+  right: 25px;
+  z-index: 10;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 100;
+}
+
+.deselect-date {
+  top: 95px;
+}
+
+.deselect-slot {
+  top: 145px;
+}
+
+.member {
+  background: #F3F3F3;
+  width: 100%;
+  padding: 8px 13px;
+  min-height: 65px;
+  cursor: pointer;
+  top: 0;
+  -webkit-transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 800ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), height 300ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  /*box-shadow: 5px 5px 20px rgba(49, 46, 255, 0.15);*/
+  overflow: hidden;
+}
+.member:hover{
+  background: #003473;
+  box-shadow: 5px 5px 20px rgba(0, 52, 115, 0.15);
+}
+.member .name {
+  display: inline-block;
+  margin-left: 18px;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  color: #43A72D;
+}
+.member,
+.member .avatar{
+  vertical-align: middle;
+}
+.member .avatar {
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: inline-block;
+  /*position: absolute;*/
+  top: 15px;
+  left: 15px;
+  background-size: cover;
+  -webkit-filter: saturate(50%) contrast(120%);
+          filter: saturate(50%) contrast(120%);
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.member:nth-child(1),
+.member:nth-child(2),
+.member:nth-child(3),
+.member:nth-child(4),
+.member:nth-child(5),
+.member:nth-child(6),
+.member:nth-child(7),
+.member:nth-child(8) {
+  -webkit-transform: translatey(0px) perspective(100px) translatez(0px);
+          transform: translatey(0px) perspective(100px) translatez(0px);
+}
+.member.selected {
+  -webkit-transform: translatey(0px) perspective(100px) translatez(0px);
+          transform: translatey(0px) perspective(100px) translatez(0px);
+  min-height: 200px;
+  height: 100%;
+  cursor: default;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 10px 10px 60px rgba(3, 0, 199, 0.1);
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1), height 500ms cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 800ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.member.selected:hover{
+  background: #F3F3F3;
+}
+.member.selected .deselect-member {
+  opacity: 1;
+  pointer-events: auto;
+}
+.member.selected .name,
+.member.selected .avatar {
+  -webkit-transform: scale(0.7) translatex(-30px);
+          transform: scale(0.7) translatex(-30px);
+}
+.member.selected .slots{
+  opacity: 1;
+}
+.slots {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-size: 25px;
+  font-weight: 100;
+}
+.slots p{
+  color: #003473;
+  font-size: 16px;
+}
+.slots li:nth-child(1) {
+  -webkit-transform: translatey(0px) perspective(100px) translatez(30px);
+          transform: translatey(0px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(2) {
+  -webkit-transform: translatey(50px) perspective(100px) translatez(30px);
+          transform: translatey(50px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(3) {
+  -webkit-transform: translatey(100px) perspective(100px) translatez(30px);
+          transform: translatey(100px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(4) {
+  -webkit-transform: translatey(150px) perspective(100px) translatez(30px);
+          transform: translatey(150px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(5) {
+  -webkit-transform: translatey(200px) perspective(100px) translatez(30px);
+          transform: translatey(200px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(6) {
+  -webkit-transform: translatey(250px) perspective(100px) translatez(30px);
+          transform: translatey(250px) perspective(100px) translatez(30px);
+}
+.slots li:nth-child(7) {
+  -webkit-transform: translatey(300px) perspective(100px) translatez(30px);
+          transform: translatey(300px) perspective(100px) translatez(30px);
+}

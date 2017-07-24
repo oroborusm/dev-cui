@@ -1,0 +1,782 @@
+@import 'normalize.css'
+@import 'bootstrap.css'
+//@import 'booking.css'
+
+$azul = #003473
+$gris = #4E5D6A
+$gris2 = #1F2C36
+$verde = #43A72D
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+body
+html
+  height: 100%
+  font-family: 'Montserrat', sans-serif
+  font-size: 16px
+header
+  //background: pink
+  height: 100%
+  min-height: 620px
+  width: 100%
+.aa
+  background: rgba(243, 243, 243, .4)
+  .a-inner-left
+    width: 39%
+  .a-inner-left
+  .a-inner-rigth
+    display: inline-block
+    vertical-align: top
+    p
+      margin-bottom: 25px
+  .a-inner-rigth
+    width: 60%
+  .aa-title
+    color: $azul
+    font-size: 36px
+    margin-bottom: 45px
+    span
+      color: $verde
+      display: block
+      font-size: 34px
+      font-weight: 100
+.absolute
+  position: absolute
+.arrows
+  bottom: 130px
+  position: absolute
+  text-align: right
+  width: 100%
+  p
+    color: white
+    cursor: pointer
+    display: inline-block
+    font-weight: 800
+    text-align: center
+    text-shadow: 0 0 16px rgba(0,0,0, .8)
+    width: 50px
+.back-layer
+  background: rgba(black, .6)
+  bottom: 0
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+.chico
+  .titulo-gral
+    font-size: 18px
+    .bisel
+      margin-top: 13px
+      width: 72px
+    .titulo-bold
+      font-size: 22px
+.chico-inversion
+  .titulo-gral
+    font-size: 18px
+    .bisel
+      margin-top: 13px
+      width: 72px
+    .titulo-bold
+      font-size: 18px
+.asesoria
+  background: #F3F3F3
+  display: block
+  margin-top: 40px
+  padding: 20px
+  &.fixed
+    //left: 0
+    margin-right: -16px
+    position: fixed
+    top: 120px
+    z-index: 1001
+  h2
+    color: $azul
+    font-size: 18px
+    text-align: center
+    text-transform: uppercase
+  label
+    color: $azul
+    display: block
+    font-size: 14px
+    margin-top: 15px
+    text-align: left
+  input
+    width: 100%
+  [type="submit"]
+    background: $azul
+    border: 0
+    color: white
+    display: block
+    font-family: 'Montserrat'
+    font-size: 14px
+    font-weight: 700
+    margin: 36px auto 0
+    padding: 18px
+    text-transform: uppercase
+    transition: .2s
+    transform-origin: center
+    width: 217px
+    &:hover
+      box-shadow: 0 10px 16px rgba(black, .3)
+      transform: scale(1.03)
+.avatar-logo
+  border: 1px solid #979797
+  border-radius: 50%
+  color: $azul
+  font-size: 48px
+  line-height: 115px
+  margin: 0 auto
+  text-align: center
+  width: 115px
+  span
+    font-weight: 100
+.background-azul
+  background: $azul
+.background-light-azul
+  background: rgba(0, 52, 115, .65)
+.background-verde
+  background: $verde
+.call-to-action
+  border: 0
+  color: white
+  font-family: 'Montserrat'
+  font-size: 14px
+  font-weight: 700
+  max-width: 220px
+  padding: 18px
+  text-align: center
+  text-transform: uppercase
+.clearfix
+  clear: both
+.clear-all
+  display: block
+  margin: 0 auto
+  max-width: 1200px
+  position: relative
+  height: 700px
+.container
+  margin: 0 auto
+  max-width: 1200px
+.controls
+  bottom: 55px
+  height: 40px
+  left: 0
+  position: absolute
+  right: 0
+  ul
+    margin: 10px auto
+    padding: 0 32px
+    text-align: left
+    width: 100%
+    li
+      background: rgba(255, 255, 255, .8)
+      border-radius: 50%
+      box-shadow: 0 0 16px rgba(0, 0, 0, .6)
+      cursor: pointer
+      display: inline-block
+      height: 20px
+      margin: 0 10px 0 0
+      width: 20px
+      transform-origin: center
+    li.active
+      background: $verde
+      transform: scale(1.05)
+.descubre
+  background-image: url('../img/descubre.jpg')
+  background-position: center
+  background-size: cover
+  float: none
+  height: 700px
+  .relative
+    height: 100%
+  .descubre-inner
+    background: rgba(31,44,54, .8)
+    bottom: 0
+    height: 100%
+    max-width: 700px
+    padding: 80px 30px
+    position: absolute
+    right: 0
+    text-align: left
+    width: 100%
+    .descubre-inner-left
+      margin-right: 7%
+      width: 50%
+    .descubre-inner-left
+    .descubre-inner-right
+      display: inline-block
+      vertical-align: top
+      p
+        color: white
+        font-size: 14px
+        font-weight: 100
+        text-align: justify
+      ul
+        margin-top: 17px
+        padding: 0 0 0 18px
+        li
+          color: white
+          font-size: 14px
+          font-weight: 100
+          padding: 5px 0
+          position: relative
+          list-style: none
+          &:before
+            background: $verde
+            border-radius: 50%
+            content: ""
+            height: 7px
+            left: -18px
+            position: absolute
+            top: 12px
+            width: 7px
+          strong
+            font-weight: 700
+    .descubre-inner-right
+      width: 40%
+      .simulacion-text
+        font-size: 18px
+        text-align: left
+      .simulacion-text-call
+        font-size: 24px
+        font-weight: 700
+        text-align: left
+.filter
+  background: black
+  height: 100%
+  left: 0
+  opacity: .15
+  position: absolute
+  top: 0
+  width: 100%
+.font-light
+  font-size: 14px
+  font-weight: 100
+.footer-info
+  .footer-info-1
+    padding: 30px 0 100px 0
+    text-align: center
+    .logo
+      margin: 0 auto 32px auto
+      width: 230px
+      img
+        width: 100%
+    .bajada
+      border-bottom: 1px solid #FFFFFF
+      color: #FFFFFF
+      display: initial
+      font-size: 14px
+      letter-spacing: 0
+      text-transform: uppercase
+    .phono
+      margin-top: 12px
+      p
+        display: inline-block
+        font-size: 18px
+        margin: 0 12px
+        text-transform: uppercase
+        vertical-align: top
+  .social
+    margin-top: 20px
+    ul
+      margin: 0 auto
+      padding: 0
+      li
+        display: inline-block
+        height: 30px
+        width: 30px
+        svg
+          width: 100%
+  .footer-info-2
+    padding: 13px 0
+    text-align: center
+    p
+      border-bottom: 1px solid white
+      font-size: 14px
+      margin: 0 16px 0 0
+    p
+    ul
+      display: inline-block
+      vertical-align: middle
+    ul
+      margin: 0
+      padding: 0
+      li
+        border-right: 2px solid white
+        display: inline-block
+        font-size: 14px
+        padding: 0 5px
+        &:nth-child(last)
+          border-right: 0
+  .footer-info-3
+    color: #979797
+    font-family: 'Helvetica', Open-sans
+    font-size: 14px
+    padding: 8px 0
+    text-align: center
+.ic
+  display: inline-block
+  height: 26px
+  margin-right: 5px
+  vertical-align: middle
+  width: 26px
+  img
+    //height: 100%
+    width: 100%
+.ic-1
+  //background-image: url('../img/ic-1')
+  background-size: cover
+.ic-2
+  //background-image: url('../img/ic-2')
+  background-size: cover
+.ic-3
+  //background-image: url('../img/ic-3')
+  background-size: cover
+.inversion-row
+  position: relative
+  background: rgba(243, 243, 243, .4)
+  .accordion
+    position: relative
+    z-index: 10
+  .inversion-row-content
+    background: white
+    padding: 37px
+    position: relative
+    z-index: 10001
+    .inversion-inner-left
+      margin-right: 5%
+      width: 24%
+      .chico-inversion
+        margin: 0 !important
+    .inversion-inner-left
+    .inversion-inner-right
+      display: inline-block
+      vertical-align: top
+    .inversion-inner-right
+      width: 70%
+    .inversion-inner-total
+      width: 100%
+      .avatar-logo
+        margin: 0 0 16px 0
+
+    .titulo
+      left: 0
+      position: absolute
+      top: -156px
+  .member.inversion
+    border: 1px solid #979797
+    display: inline-block
+    height: 370px
+    margin-right: .5%
+    padding: 27px 17px
+    transform-origin: center
+    transition: .25s
+    vertical-align: top
+    width: 19%
+    &:hth-child(last)
+      margin-right: 0
+    &:hover
+      background: $verde
+      //transform: scale(1.01)
+      .avatar-logo
+        background: white
+        border: 0
+        color: $verde
+      .inversion-row-content
+        .avatar-logo
+          background: transparent
+          background: white
+          border: 1px solid #979797
+          color: $azul
+        .name
+          color: $gris
+          h3
+            color: $gris
+            span
+              color: $gris
+            .bisel
+              background: $gris
+      .name
+        color: white
+        h3
+          color: white
+          span
+            color: white
+          .bisel
+            background: white
+      .sub-name
+        p
+          color: white
+    &.active
+      .slots
+        pointer-events: auto
+        opacity: 1
+        visibility: visible
+        z-index: 1
+        .back-layer
+          z-index: 101
+    .avatar
+      display: block
+      margin: 0 auto
+      height: 115px
+      width: 115px
+    .name
+      font-size: 18px
+      margin: 21px 0 0 0
+      text-align: left
+    .slots
+      left: 0
+      pointer-events: none
+      position: absolute
+      opacity: 0
+      top: 0
+      visibility: hidden
+      width: 100%
+      z-index: -1
+    .sub-name
+      p
+        font-size: 13px
+        font-weight: 100
+  .table-inversion
+    border: 0
+    border-bottom: 1px solid rgba(78,93,106, .5)
+    padding: 0
+    table
+      margin-bottom: 10px
+    th
+      padding: 5px !important
+    thead
+      background: $verde
+      tr
+        th
+          color: white
+          border: 2px solid white
+          font-size: 14px
+    tbody
+      tr:nth-child(even)
+        background: white
+        th
+          background: white
+      tr
+        th
+          border-bottom: 10px solid white
+          border-left: 3px solid white
+          border-right: 3px solid white
+          border-top: 10px solid white
+          color: $azul
+          font-size: 14px
+          font-weight: normal
+          text-align: left
+.link-small
+  padding: 5px 15px
+.link-big
+  display: block
+  width: 220px
+.mini-bar-top
+  background: $verde
+  height: 40px
+  left: 0
+  //padding-top: 12px
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  z-index: 1
+  .container
+    padding-top: 10px
+  .mini-bar-left
+    h3
+      color: white
+      font-size: 20px
+      font-weight: 700
+      margin: 0
+  .mini-bar-left
+  .mini-bar-right
+    display: inline-block
+    font-size: 0
+    vertical-align: middle
+    width: 100%
+  .mini-bar-right
+    text-align: right
+    a
+      color: white
+      font-size: 16px
+      font-weight: 700
+      margin: 0
+.relative
+  position: relative
+.section
+  padding: 40px 0 90px 0
+.slider
+  display: block
+  height: 100%
+  margin: 0 auto
+  min-height: 620px
+  overflow: hidden
+  position: relative
+  width: 100%
+  .nav-header
+    //background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+    background: rgba($azul, .2)
+    //height: 130px
+    left: 0
+    padding: 15px 0
+    position: absolute
+    right: 0
+    top: 40px
+    z-index: 1
+    nav
+      float: right
+      height: 60px
+      a
+        color: white
+        display: inline-block
+        font-size: 13px
+        font-weight: 700
+        line-height: 60px
+        padding: 0 5px
+        text-decoration: none
+    nav
+    .logo
+      display: inline-block
+      vertical-align: middle
+    .logo
+      width: 230px
+      img
+        width: 100%
+    .logo-fixed
+      display: none
+      width: 230px
+      img
+        width: 100%
+  .slide
+    background-color: black
+    background-position: center
+    background-size: cover
+    display: inline-block
+    height: 100%
+    position: relative
+    width: 100%
+    .container
+      margin-top: 40vh
+      position: relative
+      z-index: 2
+.slider.nav-fixed
+  .mini-bar-top
+  .nav-header
+    position: fixed
+    z-index: 100
+  .nav-header
+    background: white
+    height: 80px
+    padding: 10px 0
+    .logo
+      display: none
+    .logo-fixed
+      display: inline-block
+    nav
+      a
+        color: #666
+.slider-container
+  font-size: 0
+  height: 100%
+  left: 0
+  position: relative
+  right: 0
+  transition: .35s
+  white-space: nowrap
+  *
+    white-space: normal
+.staff
+  border-top: 3px solid #F3F3F3
+  margin-top: 40px
+  padding: 0
+  .avatar
+    //border: 1px solid $gris
+    //border-radius: 50%
+    height: 45px
+    width: 45px
+    svg
+      width 100%
+  .avatar
+  .deselect-member
+  .name
+    display: inline-block
+    vertical-align: middle
+  .member
+    border-bottom: 3px solid #F3F3F3
+    padding: 14px 0
+    width: 100%
+    .avatar
+      svg
+        overflow: visible
+        circle
+        .acrodeon-close-1
+          transform-origin: center
+          transition: .35s
+    &.active
+      //position: absolute
+      //transform: translatey(0px) perspective(100px) translatez(0px)
+      .avatar
+        svg
+          circle
+            fill: #fff !important
+            stroke: #43A72D !important
+            stroke-width: 3px
+          path
+            stroke: #43A72D !important
+          .acrodeon-close-1
+            transform: rotate(-90deg)
+          .acrodeon-close-2
+            stroke: #fff !important
+      .slots
+        display: block
+        opacity: 1
+        position: relative
+  .name
+    color: $azul
+    font-size: 18px
+    font-weight: 700
+    margin-left: 18px
+  .slots
+    display: none
+    opacity: 0
+    position: absolute
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1)
+    width: 100%
+    ul
+      margin-top: 17px
+      li
+        border-bottom: 1px solid rgba(151, 151, 151, .2)
+        padding: 17px 0
+        position: relative
+        list-style: none
+        &:before
+          background: $verde
+          border-radius: 50%
+          content: ""
+          height: 7px
+          left: -18px
+          position: absolute
+          top: 22px
+          width: 7px
+        strong
+          font-weight: 700
+.table
+  text-align: center
+  th
+    color: #8B8B8B
+    font-size: 16px
+    font-weight: 700
+    padding: 16px !important
+    text-align: center
+.table-1
+  .table
+    tbody
+      tr
+        th.th-active
+          background: $gris
+          color: white
+        th
+          cursor: pointer
+          transition: .25s
+          &:hover
+            background: $gris
+            color: white
+
+.table-2
+  .table
+    tbody
+      tr
+        th.th-active
+          background: $verde
+          color: white
+        th
+          cursor: pointer
+          transition: .25s
+          &:hover
+            background: $verde
+            color: white
+.table-3
+  .table
+    tbody
+      tr
+        th.th-active
+          background: $azul
+          color: white
+        th
+          cursor: pointer
+          transition: .25s
+          &:hover
+            background: $azul
+            color: white
+.table-green
+  color: $verde !important
+.table-striped>tbody>tr:nth-of-type(odd)
+  background: white
+.table-row
+  border: 1px solid #EEECEC
+  padding: 10px
+  .table-title
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+
+.table-title
+  border-bottom: 1px solid $gris
+  font-size: 20px
+  font-weight: 700
+  padding: 0 0 20px 0
+  text-align: center
+.table>tbody>tr>th
+  background: #F3F3F3
+  border: 7px solid white
+  border-top: 0
+.text-blue
+  color: $azul
+.text-green
+  color: $verde
+.text-gris
+  color: $gris
+.text-gris-dos
+  color: $gris2
+.text-white
+  color: white
+.titulo-gral
+  font-size: 48px
+  font-weight: 100
+  margin: 0 0 33px 0
+  position: relative
+  .bisel
+    background: $verde
+    height: 1px
+    left: 0
+    position: absolute
+    width: 170px
+  .titulo-bold
+    display: block
+    font-size: 65px
+    font-weight: 700
+.titulo-slide
+  color: white
+  font-size: 70px
+  font-weight: 100
+  .titulo-slide-bold
+    display: block
+    font-size: 65px
+    font-weight: 700
+.titulo-slide-bajada
+  color: white
+  display: block
+  font-size: 28px
+  font-weight: 100
+  max-width: 600px
+.qa
+  padding: 40px 0
+  position: relative
+  .staff
+    position: relative
+@media (max-width: 800px)
+  .slider
+    width: 100%
