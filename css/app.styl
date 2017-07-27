@@ -1015,8 +1015,9 @@ header
   .inversion-row
     .member.inversion.active
       .slots
-        overflow-y: scroll
-        height: 300px
+        .inversion-row-content
+          overflow-y: scroll
+          height: 350px
 @media (max-width: 585px)
   .no-padding-mob
     padding: 0
@@ -1047,10 +1048,13 @@ header
           width: 50px
   .inversion-row
     .member.inversion
-      position: relative
+      //position: relative
       .slots
         .inversion-row-content
+          left: 0
           padding: 16px
+          position: fixed
+          top: 150px
     .table-inversion
       tbody
       thead
