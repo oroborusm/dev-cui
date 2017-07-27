@@ -20,4 +20,23 @@
       $('.asesoria').removeClass('fixed')
     }
   });
+
+  var menuBtn = $('.okayNav__menu-toggle');
+
+  function menuLateral (){
+    menuBtn.on('click', function(e){
+      e.preventDefault();
+      $('.nav-right').toggleClass('active')
+    });
+  }
+
+  function scroll () {
+    $('a.scroll').on('click', function (e) {
+      var href = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(".objetivo").offset().top
+      }, 'slow');
+      e.preventDefault();
+    });
+  }
 })();

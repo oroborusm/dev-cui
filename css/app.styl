@@ -1,6 +1,4 @@
 @import 'normalize.css'
-@import 'bootstrap.css'
-//@import 'booking.css'
 
 $azul = #003473
 $gris = #4E5D6A
@@ -18,10 +16,10 @@ html
 header
   //background: pink
   height: 100%
-  min-height: 620px
+  //min-height: 620px
   width: 100%
 .aa
-  background: rgba(243, 243, 243, .4)
+  background: rgba(243, 243, 243, .6)
   .a-inner-left
     width: 39%
   .a-inner-left
@@ -65,7 +63,7 @@ header
   top: 0
 .chico
   .titulo-gral
-    font-size: 18px
+    font-size: 1.1em
     .bisel
       margin-top: 13px
       width: 72px
@@ -80,13 +78,16 @@ header
     .titulo-bold
       font-size: 18px
 .asesoria
-  background: #F3F3F3
+  //background: #F3F3F3
+  background: rgba(243, 243, 243, 0.7)
   display: block
   margin-top: 40px
   padding: 20px
+  position: relative
   &.fixed
     //left: 0
     margin-right: -16px
+    margin-top: 0
     position: fixed
     top: 120px
     z-index: 1001
@@ -120,6 +121,19 @@ header
     &:hover
       box-shadow: 0 10px 16px rgba(black, .3)
       transform: scale(1.03)
+  .aleta-mobile
+    background: rgba(243,243,243,0.7)
+    border-radius: 5px
+    color: white
+    height: 40px
+    line-height: 40px
+    opacity: 0
+    position: absolute
+    right: -40px
+    text-align: center
+    top: 0
+    visibility: hidden
+    width: 40px
 .avatar-logo
   border: 1px solid #979797
   border-radius: 50%
@@ -336,7 +350,7 @@ header
   background-size: cover
 .inversion-row
   position: relative
-  background: rgba(243, 243, 243, .4)
+  background: rgba(243, 243, 243, .6)
   .accordion
     position: relative
     z-index: 10
@@ -367,6 +381,7 @@ header
       top: -156px
   .member.inversion
     border: 1px solid #979797
+    cursor: pointer
     display: inline-block
     height: 370px
     margin-right: .5%
@@ -469,6 +484,8 @@ header
           font-size: 14px
           font-weight: normal
           text-align: left
+.justify
+  text-align: justify
 .link-small
   padding: 5px 15px
 .link-big
@@ -505,6 +522,45 @@ header
       font-size: 16px
       font-weight: 700
       margin: 0
+.okayNav
+  button
+    background: transparent
+    border: 0
+    opacity: 1
+    position: absolute
+    right: 0
+    top: 30px
+    visibility: visible
+    width: 36px
+    svg
+      width: 100%
+      circle
+        fill: white
+    &[aria-hidden]
+      opacity: 0
+      visibility: hidden
+  ul
+    &[aria-hidden]
+      right: -200px !important
+    &[data-okay-overflow]
+      background: white
+      border-left: 1px solid #F3F3F3
+      height: 100%
+      padding: 10px
+      position: fixed
+      right: 0
+      top: 0
+      transition: .45s
+      width: 200px
+      li
+        display: block
+        a
+        color: #fff
+        font-size: 13px
+        font-weight: 700
+        line-height: 40px
+        padding: 0 5px
+        text-decoration: none
 .relative
   position: relative
 .section
@@ -513,13 +569,13 @@ header
   display: block
   height: 100%
   margin: 0 auto
-  min-height: 620px
+  //min-height: 620px
   overflow: hidden
   position: relative
   width: 100%
   .nav-header
     //background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
-    background: rgba($azul, .2)
+    background: rgba($azul, .4)
     //height: 130px
     left: 0
     padding: 15px 0
@@ -531,20 +587,29 @@ header
     nav
       float: right
       height: 60px
-      a
-        color: white
-        display: inline-block
-        font-size: 13px
-        font-weight: 700
-        line-height: 60px
-        padding: 0 5px
-        text-decoration: none
+      //position: relative
+      .nav-visible
+        list-style: none
+        margin: 0
+        overflow: hidden
+        padding: 0
+        //white-space: nowrap;
+        li
+          display: inline-block
+          a
+            color: white
+            font-size: 13px
+            font-weight: 700
+            line-height: 60px
+            padding: 0 5px
+            text-decoration: none
     nav
     .logo
       display: inline-block
       vertical-align: middle
     .logo
-      width: 230px
+      padding-right: 10px
+      width: 240px
       img
         width: 100%
       svg
@@ -558,17 +623,20 @@ header
         .logo-4
           fill: white
         .logo-5
-        .logo-6
-          animation: dash 10s linear
+          animation:  dash 2s 1 ease-in-out forwards
+          //animation-direction: reverse
           stroke: $azul
-          stroke-dasharray: 1000
+          stroke-dasharray: 0
+          stroke-dashoffset: 0
+        .logo-6
+          animation: dash 1s linear
+          stroke: $azul
+          stroke-dasharray: 70
         .logo-circle
           fill: $verde
     .logo-fixed
       display: none
       width: 230px
-      img
-        width: 100%
   .slide
     background-color: black
     background-position: center
@@ -578,9 +646,12 @@ header
     position: relative
     width: 100%
     .container
-      margin-top: 40vh
-      position: relative
       z-index: 2
+      .hero
+        margin-top: -150px
+        position: absolute
+        top: 50%
+
 .slider.nav-fixed
   .mini-bar-top
   .nav-header
@@ -603,7 +674,7 @@ header
         fill: #43a72d
       .logo-5
       .logo-6
-        animation: dash 10s linear
+        animation: dash 8s 1 ease-in-out
         stroke: white
         stroke-dasharray: 1000
       .logo-circle
@@ -611,9 +682,16 @@ header
     .logo-fixed
       display: none
       //display: inline-block
+    .okayNav
+      button
+        svg
+          circle
+            fill: #666
     nav
-      a
-        color: #666
+      .nav-visible
+        li
+          a
+            color: #666
 .slider-container
   font-size: 0
   height: 100%
@@ -625,24 +703,25 @@ header
   *
     white-space: normal
 .staff
-  border-top: 3px solid #F3F3F3
+  border-top: 2px solid #F3F3F3
   margin-top: 40px
   padding: 0
   .avatar
-    //border: 1px solid $gris
-    //border-radius: 50%
-    height: 45px
-    width: 45px
+    height: 30px
+    width: 30px
     svg
-      width 100%
+      height: 100%
+      width: 100%
   .avatar
   .deselect-member
   .name
     display: inline-block
     vertical-align: middle
   .member
-    border-bottom: 3px solid #F3F3F3
+    border-bottom: 2px solid #F3F3F3
+    cursor: pointer
     padding: 14px 0
+    transition: .25s
     width: 100%
     .avatar
       svg
@@ -674,6 +753,7 @@ header
     color: $azul
     font-size: 18px
     font-weight: 700
+    line-height: 30px
     margin-left: 18px
   .slots
     display: none
@@ -688,6 +768,8 @@ header
         padding: 17px 0
         position: relative
         list-style: none
+        &:nth-last-child(1)
+          border-bottom 0px
         &:before
           background: $verde
           border-radius: 50%
@@ -695,7 +777,7 @@ header
           height: 7px
           left: -18px
           position: absolute
-          top: 22px
+          top: 24px
           width: 7px
         strong
           font-weight: 700
@@ -815,15 +897,118 @@ header
   position: relative
   .staff
     position: relative
+@media (max-width: 1200px)
+  .okayNav
+    padding-right: 25px
+  .titulo-slide
+    font-size: 46px
+    .titulo-slide-bold
+      font-size: 46px
+@media (max-width: 1150px)
+  .chico-inversion
+    .titulo-gral
+      font-size: 16px
+      .titulo-bold
+        font-size: 16px
+@media (max-width: 1050px)
+  .container
+      width: 100%
+  .asesoria
+    display: none
+@media (max-width: 900px)
+  .titulo-gral
+    font-size: 38px
+    .titulo-bold
+      font-size: 45px
+  .titulo-slide
+    font-size: 36px
+    .titulo-slide-bold
+      font-size: 36px
+  .titulo-slide-bajada
+    font-size: 20px
 @media (max-width: 800px)
+  .inversion-row
+    .member.inversion
+      height: initial
+      width: 100%
+      .avatar-logo
+      .headers
+        display: inline-block
+        vertical-align: middle
+      .headers
+        margin-left: 16px
   .slider
     width: 100%
+@media (max-width: 768px)
+  .container
+      width: 100%
+  .descubre
+    .descubre-inner
+      .descubre-inner-right
+        .simulacion-text-call
+          font-size: 19px
+  .footer-info
+    .footer-info-1
+      .bajada
+        font-size: 13px
+      .phono
+        .text-white
+          font-size: 13px
+    .footer-info-3
+      font-size: 11px
+  .no-padding
+    padding: 0
+  .mini-bar-top
+    .mini-bar-right
+      a
+        font-size: 12px
+        span
+          display: none
+  .slider
+    .slide
+      .container
+        .hero
+          left: 0
+          padding: 10px
+          width: 100%
+  .table>tbody>tr>th
+    border: 3px solid #fff
+    padding: 8px !important
+  .table-row
+    padding: 10px 0
+  .titulo-gral
+    font-size: 30px
+    .bisel
+      width: 100px
+    .titulo-bold
+      font-size: 38px
+  .titulo-slide
+    .titulo-slide-bold
+      font-size: 32px
+  .titulo-slide-bajada
+    font-size: 16px
+@media (max-width: 730px)
+  //
+@media (max-width: 508px)
+  //
+
 
 @keyframes dash {
   from {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 70;
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash-not {
+  from {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: -1000;
   }
 }
