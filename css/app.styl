@@ -197,6 +197,10 @@ header
       background: $verde
       border: 2px solid rgba(255, 255, 255, .8)
       transform: scale(1.05)
+.dist-desk
+  font-size: initial
+.dist-mob
+  font-size: 0
 .descubre
   background-image: url('../img/descubre.jpg')
   background-position: center
@@ -468,6 +472,10 @@ header
         th
           color: white
           border: 2px solid white
+          font-size: 14px
+        .dist-desk
+          font-size: 0
+        .dist-mob
           font-size: 14px
     tbody
       tr:nth-child(even)
@@ -934,8 +942,6 @@ header
       padding: 5px 17px
       width: 100%
       .avatar-logo
-        line-height: 80px
-      .avatar-logo
       .headers
         display: inline-block
         vertical-align: middle
@@ -947,6 +953,7 @@ header
 @media (max-width: 768px)
   .avatar-logo
     font-size: 32px
+    line-height: 80px
     height: 80px
     width: 80px
   .container
@@ -965,6 +972,12 @@ header
           font-size: 13px
     .footer-info-3
       font-size: 11px
+  .inversion-row
+    .member.inversion
+      .slots
+        .inversion-row-content
+          .titulo
+            display: none
   .no-padding
     padding: 0
   .mini-bar-top
@@ -1013,7 +1026,18 @@ header
         width: calc(100% - 90px)
       .inversion-inner-right
         width: 100%
-
+  .inversion-row
+    .member.inversion
+      position: relative
+      .slots
+        .inversion-row-content
+          padding: 16px
+    .table-inversion
+      tbody
+      thead
+        tr
+          th
+            font-size: 12px
 @keyframes dash {
   from {
     stroke-dashoffset: 70;
