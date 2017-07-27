@@ -30,13 +30,76 @@
     });
   }
 
-  function scroll () {
-    $('a.scroll').on('click', function (e) {
-      var href = $(this).attr('href');
-      $('html, body').animate({
-        scrollTop: $(".objetivo").offset().top
-      }, 'slow');
-      e.preventDefault();
+  //scrolltop e indicador
+
+  var sections = $('.content');
+  var sectionLinks = $('.section-link');
+  var navIndicators = $('.nav-indicator');
+
+  var previousIndex = -1;
+  var currentSectionIndex = 0;
+  var currentSection;
+  var currentLink;
+  var currentIndicator;
+
+  var MAX_WIDTH = 44;
+
+  initNewSection();
+  animateMarker();
+
+  $(window).scroll(function() {
+
+    animateMarker();
+  });
+
+  function animateMarker() {
+
+    var currentScroll = $(this).scrollTop();
+
+    sections.each(function(index, value) {
+
+      var divPosition = $(this).offset().top;
+      if (divPosition <= currentScroll) {
+
+        currentSectionIndex = index;
+      }
     });
+
+    if (previousIndex != currentSectionIndex) {
+
+      initNewSection();
+    }
+
+    if (currentIndicator.is(':animated')) {
+      return;
+    }
+
+    var relativeScroll = currentScroll - currentSection.offset().top;
+    var scrollProgress = MAX_WIDTH - ((relativeScroll / currentSection.width()) * MAX_WIDTH);
+
+    var maxWidth = currentIndicator.css('max-width');
+
+    currentIndicator.css({ width: "" + scrollProgress + "px"});
+  }
+
+  function initNewSection() {
+
+    currentSection = sections.eq(currentSectionIndex);
+
+    sectionLinks.removeClass('active');
+    $('span').css({ width: "0%"});
+
+    currentLink = sectionLinks.eq(currentSectionIndex);
+    currentLink.addClass('active');
+
+    currentIndicator = navIndicators.eq(currentSectionIndex);
+
+    if (previousIndex < currentSectionIndex) {
+      currentIndicator.animate({
+        width: '' + MAX_WIDTH + 'px'
+      }, 50, null);
+    }
+
+    previousIndex = currentSectionIndex;
   }
 })();
