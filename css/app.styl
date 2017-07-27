@@ -257,7 +257,18 @@ header
       width: 40%
       .simulacion-text
         font-size: 18px
+        padding-top: 22px
+        position: relative
         text-align: left
+        &:before
+          background: $verde
+          content: ''
+          display: block
+          height: 3px
+          left: 0
+          position: absolute
+          top: 0
+          width: 50%
       .simulacion-text-call
         font-size: 24px
         font-weight: 700
@@ -1018,7 +1029,22 @@ header
         .inversion-row-content
           overflow-y: scroll
           height: 350px
+@media (max-width: 600px)
+  .aa
+    .a-inner-rigth
+      width: 100%
 @media (max-width: 585px)
+  .descubre
+    .descubre-inner
+      .descubre-inner-left
+        margin-right: 0
+        width: 100%
+      .descubre-inner-right
+        width: 100%
+        .simulacion-text
+          width: 100%
+        .simulacion-text-call
+          margin-top: 32px
   .no-padding-mob
     padding: 0
   .inversion-row
@@ -1061,6 +1087,10 @@ header
         tr
           th
             font-size: 12px
+@media (max-width: 390px)
+  .descubre
+    .descubre-inner
+      padding: 40px 20px
 @keyframes dash {
   from {
     stroke-dashoffset: 70;
