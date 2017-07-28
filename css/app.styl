@@ -136,6 +136,17 @@ header
       width: 72px
     .titulo-bold
       font-size: 18px
+.cierra-cuestionario
+  //background: pink
+  cursor: pointer
+  height: 40px
+  position: absolute
+  right: 5px
+  top: 5px
+  width: 40px
+  z-index: 2
+  svg
+    width: 100%
 .asesoria
   //background: #F3F3F3
   background: rgba(243, 243, 243, 0.7)
@@ -817,7 +828,7 @@ header
       visibility: hidden
   ul
     &[aria-hidden]
-      right: -200px !important
+      right: -250px !important
     &[data-okay-overflow]
       background: white
       border-left: 1px solid #F3F3F3
@@ -827,7 +838,7 @@ header
       right: 0
       top: 0
       transition: .45s
-      width: 200px
+      width: 250px
       li
         display: block
         a
@@ -837,6 +848,8 @@ header
         line-height: 40px
         padding: 0 5px
         text-decoration: none
+        b
+          display: none
 .relative
   position: relative
 .section
@@ -880,7 +893,17 @@ header
             font-weight: 700
             line-height: 60px
             padding: 0 5px
+            position: relative
             text-decoration: none
+            transition: .35s
+            &:after
+              content: '/'
+              font-family: 'Montserrat'
+              position: absolute
+              top: 0
+              right: 0
+            &:hover
+              color: rgba(white, .7)
             .nav-indicator
               opacity: 0
               visibility: hidden
