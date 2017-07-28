@@ -72,18 +72,6 @@ class Slider {
     console.log(index)
   }
 
-  // moveButtonLeft(){
-  //   let left = document.getElementById("left");
-  //   left.addEventListener("click", this.moveRight);
-  //   this.restartInterval();
-  // }
-
-  // moveButtonRight(){
-  //   let left = document.getElementById("right");
-  //   left.addEventListener("click", this.move);
-  //   this.restartInterval();
-  // }
-
   moveTo(index){
     //debugger
     let left = index * 100;
@@ -91,15 +79,6 @@ class Slider {
 
     this.slider.querySelector(".controls li:nth-child("+(index+1)+")").classList.add("active");
     this.slider.querySelector(".slider-container").style.left = "-"+left+"%";
-  }
-
-  moveToRight(index){
-    debugger
-    let left = index * 100;
-    this.resetIndicador();
-
-    this.slider.querySelector(".controls li:nth-child("+(index)+")").classList.add("active");
-    this.slider.querySelector(".slider-container").style.left = "-"+(left-100)+"%";
   }
 
   start(){

@@ -20,6 +20,16 @@ header
   width: 100%
 .aa
   background: rgba(243, 243, 243, .6)
+  background-image: url('../img/aa.jpg')
+  background-position: center
+  background-size: cover
+  padding: 0 !important
+  position: relative
+  //z-index: 1002
+  .aa-white
+    background: rgba(243, 243, 243, .88)
+    padding-bottom: 90px
+    padding-top: 40px
   .a-inner-left
     width: 39%
   .a-inner-left
@@ -39,8 +49,57 @@ header
       display: block
       font-size: 34px
       font-weight: 100
+
 .absolute
   position: absolute
+
+.ac-custom label
+  display: inline-block
+  position: relative
+  font-size: 18px
+  font-weight: 100
+  padding: 0 0 0 60px
+  vertical-align: top
+  color: #003473
+  cursor: pointer
+  transition: color 0.3s
+
+.ac-custom input[type="checkbox"]
+.ac-custom input[type="radio"]
+.ac-custom label::before
+  width: 50px
+  height: 50px
+  top: 50%
+  left: 10px
+  margin-top: -25px
+  position: absolute
+  cursor: pointer
+
+.ac-custom input[type="checkbox"]
+.ac-custom input[type="radio"]
+  opacity: 0
+  display: inline-block
+  vertical-align: middle
+  z-index: 100
+
+.ac-custom label::before
+  background: $verde
+  //border: 4px solid $verde
+  border-radius: 50%
+  content: ''
+  height: 20px
+  margin-top: -10px
+  position: absolute
+  top: 50%
+  transition: opacity 0.3s
+  width: 20px
+.ac-custom svg path
+  fill: transparent
+  stroke: $verde
+  stroke-dashoffset: 0
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: 5px
 .arrows
   bottom: 130px
   position: absolute
@@ -82,8 +141,11 @@ header
   background: rgba(243, 243, 243, 0.7)
   display: block
   margin-top: 40px
+  opacity: 1
   padding: 20px
   position: relative
+  transition: .35s
+  visibility: visible
   &.fixed
     //left: 0
     margin-right: -16px
@@ -91,6 +153,9 @@ header
     position: fixed
     top: 120px
     z-index: 1001
+  &.opacidad
+    opacity: 0
+    visibility: hidden
   h2
     color: $azul
     font-size: 18px
@@ -281,10 +346,13 @@ header
   position: absolute
   top: 0
   width: 100%
+.fondos
+  padding-bottom: 20px !important
 .font-light
   font-size: 14px
   font-weight: 100
 .footer-info
+  position: relative
   .footer-info-1
     padding: 30px 0 100px 0
     text-align: center
@@ -314,11 +382,20 @@ header
       margin: 0 auto
       padding: 0
       li
+        cursor: pointer
         display: inline-block
         height: 30px
         width: 30px
+        &:hover
+          svg
+            .cls-1
+            .fb-1
+              fill: $verde
         svg
           width: 100%
+          .cls-1
+          .fb-1
+            transition: .35s
   .footer-info-2
     padding: 13px 0
     text-align: center
@@ -542,6 +619,181 @@ header
       font-size: 16px
       font-weight: 700
       margin: 0
+.modal
+  background: rgba(0,0,0,0.6)
+  bottom: 0
+  display: block
+  left: 0
+  opacity: 0
+  position: fixed
+  right: 0
+  top: 0
+  visibility: hidden
+  z-index: -30
+  &.active
+    opacity: 1
+    visibility: visible
+    z-index: 1002
+  .form
+    margin: 0 auto
+    max-width: 500px
+    button
+      background: $verde
+      border: 0
+      color: white
+      font-family: 'Montserrat'
+      font-weight: 700
+      font-size: 18px
+      margin: 16px auto
+      padding: 16px
+      width: 100%
+
+    .modal-form
+      margin: 0 auto
+      max-width: 500px
+      width: 100%
+      input
+        height: 45px
+        width: 100%
+      input[type=submit]
+      button
+        background: $verde
+        border: 0
+        color: white
+        font-family: 'Montserrat'
+        font-weight: 700
+        font-size: 18px
+        margin-top: 16px
+        width: 100%
+        &:hover
+          background: rgba($verde, .8)
+      label
+        font-size: 18px
+
+  .modal-inner
+    margin-top: -25%
+    position: relative
+    margin-top: 135px
+    .formulario
+      padding: 0
+      .cuestionario
+        background: white
+        overflow: hidden
+        //overflow-x: scroll
+        white-space: nowrap
+        .cierra-cuestionario
+          //background: pink
+          cursor: pointer
+          height: 40px
+          position: absolute
+          right: 5px
+          top: 5px
+          width: 40px
+          z-index: 2
+          svg
+            width: 100%
+        .pregunta
+          display: inline-block
+          font-size: 0
+          margin-left: -4px
+          margin-right: -4px
+          padding: 32px
+          vertical-align: top
+          width: 100%
+          white-space: normal
+          .pregunta-inner-left
+            margin-right: 5%
+            padding-top: 16px
+            width: 24%
+            p
+              margin: 0
+            .font-bold
+              font-size: 18px
+              font-weight: 700
+              position: relative
+              &:before
+                background: $verde
+                content: ''
+                height: 3px
+                left: 0
+                position: absolute
+                bottom: -16px
+                width: 40%
+            .font-light
+              font-size: 18px
+              font-weight: 100
+            .chico-inversion
+              margin: 0 !important
+          .pregunta-inner-left
+          .pregunta-inner-right
+            display: inline-block
+            vertical-align: top
+          .pregunta-inner-right
+            border-top: 2px solid #f3f3f3
+            width: 70%
+            .button-next
+              background-color: $verde !important
+              border: 0 !important
+              color: white !important
+              float: right
+              font-size: 14px
+              margin-top: 16px
+              padding: 16px 24px
+              transition: .35s
+              &[disabled]
+                background: rgba($verde, .4) !important
+            .check-line
+              border-bottom: 2px solid #f3f3f3
+              list-style: none
+              //min-height: 60px
+              margin: 0
+              padding: 0
+              position: relative
+              p
+                font-size: 14px
+                //height: 60px
+                line-height: 30px
+                margin: 0
+                padding: 10px 0
+                &:hover
+                  background: #f3f3f3
+                input
+                  background: $verde
+                  display: inline-block;
+                  height: 30px
+                  //left: 10px
+                  margin-top: -15px
+                  opacity: 0;
+                  position: absolute
+                  vertical-align: middle;
+                  width: 30px
+                  -webkit-appearance: none;
+                  z-index: 100;
+                label
+                  //line-height: 60px
+                svg
+                  height: 40px
+                  left: 0
+                  line-height: 40px
+                  margin-top: -20px
+                  position: absolute
+                  top: 50%
+                  transition: stroke-dashoffset 0.2s ease-in-out 0s
+                  width: 40px
+                .calc
+                  margin-right: 20px
+            .button
+              border: 1px solid #999999
+              background-color: #cccccc
+              color: #666666
+            .inner-italic
+              font-size: 15px
+              font-style: italic
+              font-weight: 100
+          .pregunta-inner-total
+            width: 100%
+            .avatar-logo
+              margin: 0 0 16px 0
 .nav-indicator
   background: white
   display: block
@@ -613,6 +865,7 @@ header
       height: 60px
       //position: relative
       .nav-visible
+        height: 60px
         list-style: none
         margin: 0
         overflow: hidden
@@ -684,7 +937,7 @@ header
   .mini-bar-top
   .nav-header
     position: fixed
-    z-index: 100
+    z-index: 1003
   .nav-header
     background: white
     height: 80px
@@ -759,6 +1012,8 @@ header
     padding: 14px 0
     transition: .25s
     width: 100%
+    &:hover
+      background: #f3f3f3
     .avatar
       svg
         overflow: visible
@@ -769,6 +1024,8 @@ header
     &.active
       //position: absolute
       //transform: translatey(0px) perspective(100px) translatez(0px)
+      &:hover
+        background: transparent
       .avatar
         svg
           circle
@@ -904,7 +1161,7 @@ header
   position: relative
   .bisel
     background: $verde
-    height: 1px
+    height: 3px
     left: 0
     position: absolute
     width: 170px
@@ -912,6 +1169,7 @@ header
     display: block
     font-size: 65px
     font-weight: 700
+    width: 100% !important
 .titulo-slide
   color: white
   font-size: 70px
@@ -921,6 +1179,7 @@ header
     display: block
     font-size: 65px
     font-weight: 700
+    width: 100% !important
 .titulo-slide-bajada
   color: white
   display: block
@@ -939,7 +1198,9 @@ header
   .titulo-slide
     font-size: 46px
     .titulo-slide-bold
+      display: block
       font-size: 46px
+      width: 100% !important
 @media (max-width: 1150px)
   .chico-inversion
     .titulo-gral
@@ -959,7 +1220,9 @@ header
   .titulo-slide
     font-size: 36px
     .titulo-slide-bold
+      display: block
       font-size: 36px
+      width: 100% !important
   .titulo-slide-bajada
     font-size: 20px
 @media (max-width: 800px)
@@ -1035,7 +1298,9 @@ header
       font-size: 38px
   .titulo-slide
     .titulo-slide-bold
+      display: block
       font-size: 32px
+      width: 100%
   .titulo-slide-bajada
     font-size: 16px
 @media (max-width: 730px)
@@ -1103,6 +1368,19 @@ header
         tr
           th
             font-size: 12px
+@media (max-width: 500px)
+  .modal
+    .modal-inner
+      .formulario
+        .cuestionario
+          .pregunta
+            overflow-y: scroll
+            height: 350px
+            .pregunta-inner-left
+            .pregunta-inner-right
+              width: 100%
+            .pregunta-inner-right
+              margin-top: 22px
 @media (max-width: 390px)
   .descubre
     .descubre-inner

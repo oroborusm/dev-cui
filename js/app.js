@@ -4,6 +4,7 @@
   var backhead = $('body').height()
   $(window).scroll(function (){
     wScroll = $(this).scrollTop();
+    var limit = $('footer').offset().top - winHeight - 20;
     //pixels= 50 + (wScroll/8)
     //console.log(wScroll)
 
@@ -18,6 +19,12 @@
       $('.asesoria').addClass('fixed')
     }else{
       $('.asesoria').removeClass('fixed')
+    }
+
+    if (limit < wScroll) {
+      $('.asesoria').addClass('opacidad');
+    }else{
+      $('.asesoria').removeClass('opacidad');
     }
   });
 
@@ -117,4 +124,128 @@
 
     previousIndex = currentSectionIndex;
   }
+
+  function modal (){
+    $('.descubre-button').on('click', function(){
+      $('.modal').addClass('active')
+    })
+  }
+  modal();
+
+  // checkboxes
+  $("input.check-1-int").on( "click", function() {
+    console.log('cloc');
+    $( ".check-1" ).addClass("checkeado");
+    if ($('.check-1.checked')) {
+      $('.check-1.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-1 .button').on('click', function(){
+    $('.check-1').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-2-int").on( "click", function() {
+    $( ".check-2" ).addClass("checkeado");
+    if ($('.check-2.checked')) {
+      $('.check-2.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-2 .button').on('click', function(){
+    $('.check-2').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-3-int").on( "click", function() {
+    $( ".check-3" ).addClass("checkeado");
+    if ($('.check-3.checked')) {
+      $('.check-3.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-3 .button').on('click', function(){
+    $('.check-3').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-4-int").on( "click", function() {
+    $( ".check-4" ).addClass("checkeado");
+    if ($('.check-4.checked')) {
+      $('.check-4.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-4 .button').on('click', function(){
+    $('.check-4').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-5-int").on( "click", function() {
+    $( ".check-5" ).addClass("checkeado");
+    if ($('.check-5.checked')) {
+      $('.check-5.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-5 .button').on('click', function(){
+    $('.check-5').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-6-int").on( "click", function() {
+    $( ".check-6" ).addClass("checkeado");
+    if ($('.check-6.checked')) {
+      $('.check-6.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-6 .button').on('click', function(){
+    $('.check-6').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-7-int").on( "click", function() {
+    $( ".check-7" ).addClass("checkeado");
+    if ($('.check-7.checked')) {
+      $('.check-7.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-7 .button').on('click', function(){
+    $('.check-7').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $("input.check-8-int").on( "click", function() {
+    $( ".check-8" ).addClass("checkeado");
+    if ($('.check-8.checked')) {
+      $('.check-8.checkeado button').attr('disabled', false);
+    }
+  });
+  $('.check-8 .button').on('click', function(){
+    $('.check-8').parents('.modal-body').css('margin-left', '-100%')
+  })
+
+  $('.cierra-cuestionario').on('click', function(){
+    $('.modal').removeClass('active')
+  });
+
+  function calcscore(){
+    var score = 0;
+    $(".calc:checked").each(function(){
+      score+=parseInt($(this).val(),10);
+    });
+    $("input[name=sum]").val(score)
+    // debugger
+    if (score <= 12) {
+      console.log('conservador')
+    }else if(score > 12 && score <= 17){
+      console.log('moderado')
+    }else if(score > 18 && score <= 22){
+      console.log('balanceado')
+    }else if(score > 22){
+      console.log('agresivo')
+    }
+  }
+  $("#click").on('click', function(){
+    calcscore()
+  });
+
+  $("#click").submit(function(e){
+    debugger
+    if(!valid) {
+      e.preventDefault();
+    }
+  });
+
+  var test = $('.aa').scrollTop();
+  console.log(test);
 })();
