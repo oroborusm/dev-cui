@@ -2,7 +2,6 @@ class Accordion {
   constructor(selector) {
     this.accordion = document.querySelector(selector);
     this.bindEvents();
-
   }
   bindEvents(){
     document.querySelectorAll(".accordion .member").forEach(itemHeader => {
